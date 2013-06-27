@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:h="http://java.sun.com/jsf/html"
+                template="/WEB-INF/templates/template.xhtml">
+    <ui:define name="content">
+        <h:outputText escape="false" value="#{myModel.status}" />
+        <br/><br/>
+        <h:outputText escape="false" value="#{myModel.persistNewEntity()}" />
+        <br/><br/>
+        <h:outputText escape="false" value="#{myModel.mergeNewEntity()}" />
+        <br/><br/>
+        <h:outputText escape="false" value="#{myModel.mergeNewEntityAndUseWrongObject()}" />
+        <br/><br/>
+        <h:outputText escape="false" value="#{myModel.persistExistingAttachedEntity()}" />
+        <br/><br/>   
+        <h:outputText escape="false" value="#{myModel.persistExistingDetachedEntity()}" />
+        <br/><br/>         
+        <h:outputText escape="false" value="#{myModel.mergeExistingDetachedEntity()}" />
+        <br/><br/>         
+        <h:outputText escape="false" value="#{myModel.mergeExistingAttachedEntity()}" />
+        <br/><br/>      
+        <h:outputText escape="false" value="#{myModel.changeSomethingInAttachedEntityWithoutMergeOrPersist()}" />
+        <br/><br/>         
+        <h:outputText escape="false" value="#{myModel.thePreviouslyChangedEntity}" />
+        <br/><br/>        
+    </ui:define>
+</ui:composition>
