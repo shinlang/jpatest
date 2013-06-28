@@ -147,7 +147,7 @@ public class MyModel {
      * useless, it's dangerous! Merge copies the state of the whole object to
      * the new object it fetches from the database -> that can possibly result
      * in complications if your entity is deeply nested and has a lot of
-     * relations.
+     * relations, or if not all fields of the merged object are filled.
      */
     public String changeSomethingInAttachedEntityWithoutMergeOrPersist() {
         dao.updateEntityWithoutMergingOrPersisting();
