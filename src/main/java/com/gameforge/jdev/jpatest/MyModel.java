@@ -168,4 +168,15 @@ public class MyModel {
         output += "<br/>-----------------------";
         return output;
     }
+    
+    public String persistComplexEntity() {
+        MyComplexEntity newEntity = new MyComplexEntity("test");
+        newEntity.setId(new MyComplexEntityId());
+        dao.persistComplexEntity(newEntity);
+//        newEntity = dao.getLatestMyComplexEntity();
+        String output = "newly persisted complex entity:<br/>";
+        output += newEntity;
+        output += "<br/>-----------------------";
+        return output;        
+    }
 }
